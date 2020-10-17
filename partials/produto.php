@@ -9,4 +9,19 @@ class Produto
     {
         $this->nome = $nome_produto;
     }
+
+    function getNome()
+    {
+        return $this->nome;
+    }
+
+    function setPreco($novo_preco)
+    {
+        $this->preco = $novo_preco;
+    }
+
+    function getPreco()
+    {
+        return $this->preco;
+    }
 }
