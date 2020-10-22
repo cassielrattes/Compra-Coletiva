@@ -3,6 +3,12 @@ include("./header.php");
 include('./models/produto.php');
 include('./connection.php');
 
+
+if (!isset($_SESSION['meu_id'])) {
+    header("Location: /compra_coletiva/");
+}
+
+
 $listaProdutos = $db->query("SELECT * FROM t_produtos")->fetchAll(PDO::FETCH_CLASS, 'Produto');
 
 ?>
