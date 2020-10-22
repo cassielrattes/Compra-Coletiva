@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../connection.php");
+include("./connection.php");
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
