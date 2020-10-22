@@ -4,6 +4,20 @@ class Produto
 {
     private $nome;
     private $preco;
+    private $foto;
+    private $qtdecoletiva;
+    private $precocoletiva;
+    private $id;
+
+    function setId($id_produto)
+    {
+        $this->id = $id_produto;
+    }
+
+    function getId()
+    {
+        return $this->id;
+    }
 
     function setNome($nome_produto)
     {
@@ -23,5 +37,15 @@ class Produto
     function getPreco()
     {
         return $this->preco;
+    }
+
+    function setFoto($novo_foto)
+    {
+        $this->foto = $novo_foto;
+    }
+
+    function getFoto()
+    {
+        return $this->foto;
     }
 }

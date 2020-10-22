@@ -1,22 +1,16 @@
-<?php include("./header.php") ?>
+<?php include("./header.php");
+if (isset($_GET['erro'])) {
+    echo "<h2>" . $_GET['erro'] . "</h2>";
+}
+?>
 
-
-
-<form>
+<form method="POST" action="./utils/autentica.php">
     <div>
-        <h1>Cadastre-se</h1>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <h1>Login</h1>
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required>
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" required>
-        <label for="numero">Número da Casa:</label>
-        <input type="text" id="numero" name="numero" required>
-        <label for="complemento">Complemento da Casa:</label>
-        <input type="text" id="complemento" name="complemento" required>
         <button type="submit">Enviar</button>
     </div>
 
