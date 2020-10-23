@@ -44,13 +44,16 @@ CREATE TABLE IF NOT EXISTS `t_usuarios` (
   `nome` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela lojinha.t_usuarios: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela lojinha.t_usuarios: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `t_usuarios` DISABLE KEYS */;
 INSERT INTO `t_usuarios` (`id`, `email`, `senha`, `cep`, `numero`, `complemento`, `nome`) VALUES
 	(1, 'cassiel@gmail.com', 'admin123', NULL, NULL, NULL, NULL),
-	(2, 'teste@gmail.com', '123', NULL, NULL, NULL, 'cassiel');
+	(2, 'teste@gmail.com', '123', NULL, NULL, NULL, 'cassiel'),
+	(3, 'admin@gmail', '123', '123', 123, '123', 'Cassiel Rattes Cortez'),
+	(5, '0', '123', '33294', 123, '0', '0'),
+	(39, 'testando@gmail.com', '123', '123', 123, '123', 'testando');
 /*!40000 ALTER TABLE `t_usuarios` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela lojinha.v_compras
@@ -64,8 +67,12 @@ CREATE TABLE IF NOT EXISTS `v_compras` (
   CONSTRAINT `v_compras_ibfk_2` FOREIGN KEY (`id_produto`) REFERENCES `t_produtos` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela lojinha.v_compras: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela lojinha.v_compras: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `v_compras` DISABLE KEYS */;
+INSERT INTO `v_compras` (`id_usuario`, `id_produto`, `quantidade`) VALUES
+	(3, 1, 31),
+	(39, 1, 13),
+	(3, 1, 122);
 /*!40000 ALTER TABLE `v_compras` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

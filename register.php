@@ -1,11 +1,9 @@
-<?php include("./header.php");
-
-?>
+<?php include("./partials/header.php"); ?>
 
 
 
-<form>
-    <div>
+<form method="POST" action="./utils/registrar.php">
+    <div class="box-lr">
         <h1>Cadastre-se</h1>
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required />
@@ -25,4 +23,4 @@
 </form>
 
 
-<?php include("./footer.php") ?>
+<?php include("./partials/footer.php"); ?>

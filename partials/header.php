@@ -28,6 +28,9 @@ session_start();
                         <a class="nav-link" href="/compra_coletiva/home.php">Home</a>
                     </li>
                     <li class="nav-item active">
+                        <a class="nav-link" href="/compra_coletiva/produtos.php">Criar Produto</a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link" href="./utils/sair.php">Sair</a>
                     </li>
                 <?php } else { ?>

@@ -1,11 +1,11 @@
-<?php include("./header.php");
+<?php include("./partials/header.php");
 if (isset($_GET['erro'])) {
     echo "<h2>" . $_GET['erro'] . "</h2>";
 }
 ?>
 
 <form method="POST" action="./utils/autentica.php">
-    <div>
+    <div class="box-lr">
         <h1>Login</h1>
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
@@ -17,4 +17,4 @@ if (isset($_GET['erro'])) {
 </form>
 
 
-<?php include("./footer.php") ?>
+<?php include("./partials/footer.php"); ?>
