@@ -16,7 +16,7 @@ $listaProdutos = $db->query("SELECT * FROM t_produtos")->fetchAll(PDO::FETCH_CLA
 
     <?php foreach ($listaProdutos as $item) { ?>
         <div class="card col-md-2">
-            <img class="card-img-top" src="<?= $item->getFoto(); ?>" alt="Card image cap">
+            <img class="card-img-top" src="./images/<?= $item->getFoto(); ?>" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"><?= $item->getNome(); ?></h5>
                 <p class="card-text">Preço: <span>R$</span><?= $item->getPreco(); ?></p>
