@@ -21,7 +21,6 @@ having soma >= qtdecoletiva;
 $result_per_offer = $db->query($sql)->fetchAll(PDO::FETCH_CLASS, 'Produto');
 ?>
 
-<div><?php if (isset($_SESSION['meu_nome'])) ?> <h1>Olá <?= $_SESSION['meu_nome'] ?></h1></div>
 
 
 <div class="container">
