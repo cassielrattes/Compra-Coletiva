@@ -1,5 +1,6 @@
 <?php
 session_start();
+$url = $_SERVER['PHP_SELF'];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ session_start();
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"> <?php if (isset($_SESSION['meu_nome'])) ?><?= $_SESSION['meu_nome'] ?></a>
+        <a class="navbar-brand" href="#"> <?php  if (isset($_SESSION['meu_nome'])) echo $_SESSION['meu_nome'] ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
