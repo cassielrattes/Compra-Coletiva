@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lojinha</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -25,14 +25,21 @@ session_start();
             <ul class="navbar-nav mr-auto">
                 <?php if (isset($_SESSION['meu_id'])) { ?>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/compra_coletiva/home.php">Home</a>
+                        <a class="nav-link" href="/compra_coletiva/home.php">Loja</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/compra_coletiva/produtos.php">Criar Produto</a>
+                        <a class="nav-link" href="/compra_coletiva/criar_produto.php">Criar Produto</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/compra_coletiva/carrinho_compra.php">Carrinho de Compra</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/compra_coletiva/lista_compra.php">Lista de Compras</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="./utils/sair.php">Sair</a>
                     </li>
+
                 <?php } else { ?>
                     <li class="nav-item active">
                         <a class="nav-link" href="/compra_coletiva/">Login</a>
